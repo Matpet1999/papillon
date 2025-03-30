@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Papillon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Hvit logo.png" alt="Papillon Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="news.html">Nyheter</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">Om oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="team">
+        <div class="container">
+            <h1>Vårt Team</h1>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('kjell.jpg')"></div>
+                    <div class="content-wrapper">
+                        <h2>Ole Hansen</h2>
+                        <p class="position">Partner & CEO</p>
+                        <div class="contact-info">
+                            <a href="tel:+4741234567" class="contact-item">
+                                <i class="fas fa-phone"></i> +47 412 34 567
+                            </a>
+                            <a href="mailto:ole@papillon.no" class="contact-item">
+                                <i class="fas fa-envelope"></i> ole@papillon.no
+                            </a>
+                            <a href="https://linkedin.com/in/ole-hansen" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                        <p class="bio">Med over 15 års erfaring innen executive search, leder Ole vårt team med fokus på bærekraftig vekst og kundetilfredshet.</p>
+                        <div class="expanded-content">
+                            <p>Ole har tidligere jobbet i ledende rekrutteringsselskaper i både Norge og utlandet. Han har spesialisert seg på lederutvikling innen teknologi og finanssektoren.</p>
+                            <ul class="expertise-list">
+                                <li>Ledersøk og utvikling</li>
+                                <li>Strategisk rådgivning</li>
+                                <li>Teambygging</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Les mer</button>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('wenche.jpg')"></div>
+                    <div class="content-wrapper">
+                        <h2>Maria Olsen</h2>
+                        <p class="position">Senior Partner</p>
+                        <div class="contact-info">
+                            <a href="tel:+4742345678" class="contact-item">
+                                <i class="fas fa-phone"></i> +47 423 45 678
+                            </a>
+                            <a href="mailto:maria@papillon.no" class="contact-item">
+                                <i class="fas fa-envelope"></i> maria@papillon.no
+                            </a>
+                            <a href="https://linkedin.com/in/maria-olsen" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                        <p class="bio">Maria har spesialisert seg på teknologisektoren og har hjulpet flere ledende teknologiselskaper med å bygge sterke lederteam.</p>
+                        <div class="expanded-content">
+                            <p>Med en bakgrunn fra Silicon Valley og over 10 års erfaring i tech-sektoren, bringer Maria unik ekspertise til vårt team.</p>
+                            <ul class="expertise-list">
+                                <li>Tech og innovasjon</li>
+                                <li>Digital transformasjon</li>
+                                <li>Startup og scale-up</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Les mer</button>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('Frode.jpeg')"></div>
+                    <div class="content-wrapper">
+                        <h2>Forde Pettersen</h2>
+                        <p class="position">Partner</p>
+                        <div class="contact-info">
+                            <a href="tel:+4743456789" class="contact-item">
+                                <i class="fas fa-phone"></i> +47 434 56 789
+                            </a>
+                            <a href="mailto:frode@papillon.no" class="contact-item">
+                                <i class="fas fa-envelope"></i> frode@papillon.no
+                            </a>
+                            <a href="https://linkedin.com/in/frode-pettersen" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                        <p class="bio">Erik har bred erfaring innen finanssektoren og leder våre oppdrag innenfor fintech og investeringsbank.</p>
+                        <div class="expanded-content">
+                            <p>Erik har tidligere jobbet i flere ledende finansinstitusjoner og har spesialisert seg på fintech og digitalisering av finanssektoren.</p>
+                            <ul class="expertise-list">
+                                <li>Fintech og digitalisering</li>
+                                <li>Investeringsbank</li>
+                                <li>Regulering og compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Les mer</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const member = button.closest('.team-member');
+                const expandedContent = member.querySelector('.expanded-content');
+                const isExpanded = expandedContent.classList.contains('show');
+                
+                // Lukk alle andre ekspanderte kort
+                document.querySelectorAll('.expanded-content.show').forEach(content => {
+                    if (content !== expandedContent) {
+                        content.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current kort
+                expandedContent.classList.toggle('show');
+                button.textContent = isExpanded ? 'Les mer' : 'Vis mindre';
+            });
+        });
+    </script>
+</body>
+</html> 
